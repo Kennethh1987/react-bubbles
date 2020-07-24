@@ -86,6 +86,27 @@ let colors = [
       hex: "#8a2be2"
     },
     id: 11
+  },
+  {
+    color: "red",
+    code: {
+      hex: "#E10304"
+    },
+    id: 12
+  },
+  {
+    color: "inglewood",
+    code: {
+      hex: "#00541A"
+    },
+    id: 13
+  },
+  {
+    color: "la",
+    code: {
+      hex: "#E2D904"
+    },
+    id: 14
   }
 ];
 
@@ -102,7 +123,7 @@ function authenticator(req, res, next) {
 
 app.post("/api/login", (req, res) => {
   const { username, password } = req.body;
-  if (username === "Lambda School" && password === "i<3Lambd4") {
+  if (username === "lambda" && password === "school") {
     req.loggedIn = true;
     setTimeout(() => {
       res.status(200).json({
